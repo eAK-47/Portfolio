@@ -1,0 +1,248 @@
+/* General Styles - Resetting margins and setting a professional font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation - This fixes the horizontal alignment */
+/* 1. Target the Nav Container to push items to the sides */
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    height: 60px; /* This keeps the height slim */
+}
+
+/* 2. Make the list horizontal and remove bullets */
+/* Navigation Bar Background */
+nav {
+    background: #2c3e50;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Horizontal Alignment */
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    height: 60px; /* Slim height */
+}
+
+/* Logo/Name Styling */
+nav strong {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+/* The List of Links */
+nav ul {
+    display: flex;         /* Makes links horizontal */
+    list-style-type: none; /* Removes bullets/dots */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 25px;     /* Space between links */
+}
+
+/* The Link Color - Force Green */
+nav ul li a {
+    color: #2ecc71 !important; /* Force the bright green color */
+    text-decoration: none;      /* Remove underline */
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #ffffff !important; /* Turns white when you mouse over */
+}
+
+/* Sections - Adding spacing and centering */
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), 
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.accent { color: #3498db; }
+
+/* Grid for Projects - Makes them sit side-by-side */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid #3498db;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.tag {
+    display: inline-block;
+    background: #e1f0fa;
+    color: #3498db;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #2c3e50;
+    color: #bdc3c7;
+    margin-top: 60px;
+}
+/* About Section Improvements */
+.about-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-top: 20px;
+}
+
+.about-flex {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+    margin-top: 25px;
+}
+
+.about-text {
+    flex: 1.5;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.about-skills {
+    flex: 1.5;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+}
+
+.about-skills h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-flex {
+        flex-direction: column;
+    }
+}
+a {
+    color: #27ae60; /* A clean, professional forest green */
+    text-decoration: none; /* Removes the underline */
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #2ecc71; /* A brighter neon green when you hover over it */
+}
+/* Project Image Styling */
+.project-img {
+    width: 100%;
+    height: 200px;         /* Keeps all project images the same size */
+    object-fit: cover;     /* Crops image to fit perfectly without stretching */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #eee; /* Placeholder color if image is missing */
+}
+
+/* Updated Card Styling for Images */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Ensure the tags look nice above the text */
+.tag {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #3498db;
+    background: #ebf5fb;
+    padding: 3px 10px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Fixed About Section spacing */
+.about-flex {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .about-flex {
+        flex-direction: column;
+    }
+}
